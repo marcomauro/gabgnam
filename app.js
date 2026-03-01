@@ -474,12 +474,136 @@ function closeModal() {
   document.getElementById('modal-overlay').classList.add('hidden');
 }
 
+// === Shopping List ===
+const SHOP_CAT_ORDER = [
+  { key: 'Frutta', icon: '🍎' },
+  { key: 'Verdura', icon: '🥬' },
+  { key: 'Carne e Pesce', icon: '🥩' },
+  { key: 'Latticini e Uova', icon: '🥛' },
+  { key: 'Pane e Cereali', icon: '🍞' },
+  { key: 'Condimenti', icon: '🫒' },
+  { key: 'Frutta secca', icon: '🥜' },
+  { key: 'Bevande', icon: '☕' },
+  { key: 'Altro', icon: '🛒' }
+];
+
+function categorize(name) {
+  const n = name.toLowerCase();
+  if (/mandaranci|clementine|kiwi|fragole|banane/.test(n)) return 'Frutta';
+  if (/lattuga|friarielli|cime di rapa|cavolfiori|zucca|insalata|carote/.test(n)) return 'Verdura';
+  if (/orata|spigola|merluzzo|hamburger|manzo|pollo|petto|salmone|carne|vitello|maiale|prosciutto|speck/.test(n)) return 'Carne e Pesce';
+  if (/latte|yogurt|parmigiano|philadelphia|scamorza|provola|uovo/.test(n)) return 'Latticini e Uova';
+  if (/pane|fiocchi|corn flakes|pasta|riso|pancarrè|gallette|plumcake|pangrattato|mollica/.test(n)) return 'Pane e Cereali';
+  if (/olio|miele|nutella|salsa|pomodoro/.test(n)) return 'Condimenti';
+  if (/noci|mandorle/.test(n)) return 'Frutta secca';
+  if (/tè|spremuta/.test(n)) return 'Bevande';
+  return 'Altro';
+}
+
+function buildShoppingList() {
+  const itemSet = new Set();
+  DAYS.forEach(day => {
+    day.meals.forEach(meal => {
+      if (meal.items) {
+        meal.items.forEach(item => itemSet.add(item.name));
+      }
+    });
+  });
+
+  const categories = {};
+  itemSet.forEach(name => {
+    const cat = categorize(name);
+    if (!categories[cat]) categories[cat] = [];
+    categories[cat].push(name);
+  });
+
+  Object.values(categories).forEach(items => items.sort((a, b) => a.localeCompare(b, 'it')));
+  return categories;
+}
+
+function getChecked() {
+  return JSON.parse(localStorage.getItem('gabgnam-checked') || '[]');
+}
+
+function saveChecked(arr) {
+  localStorage.setItem('gabgnam-checked', JSON.stringify(arr));
+}
+
+function updateCounter() {
+  const counter = document.getElementById('shop-counter');
+  if (!counter) return;
+  const checked = getChecked();
+  const total = document.querySelectorAll('.shop-item').length;
+  const done = checked.length;
+  counter.textContent = `${done}/${total}`;
+}
+
+function renderShoppingList() {
+  const categories = buildShoppingList();
+  const checked = getChecked();
+
+  let html = '<div class="shop-header"><h2>Lista della Spesa</h2>';
+  html += '<span class="shop-counter" id="shop-counter"></span></div>';
+  html += '<button class="shop-clear-btn" id="shop-clear">Deseleziona tutto</button>';
+
+  SHOP_CAT_ORDER.forEach(({ key, icon }) => {
+    if (!categories[key]) return;
+    html += '<div class="shop-cat">';
+    html += `<div class="shop-cat-title">${icon} ${key}</div>`;
+    categories[key].forEach(name => {
+      const isChecked = checked.includes(name);
+      html += `<label class="shop-item${isChecked ? ' checked' : ''}">
+        <input type="checkbox" ${isChecked ? 'checked' : ''} data-name="${name.replace(/"/g, '&quot;')}">
+        <span class="shop-check"></span>
+        <span class="shop-label">${name}</span>
+      </label>`;
+    });
+    html += '</div>';
+  });
+
+  document.getElementById('modal-body').innerHTML = html;
+  updateCounter();
+
+  // Checkbox events
+  document.querySelectorAll('.shop-item input').forEach(cb => {
+    cb.addEventListener('change', () => {
+      const name = cb.dataset.name;
+      let arr = getChecked();
+      if (cb.checked) {
+        arr.push(name);
+        cb.closest('.shop-item').classList.add('checked');
+      } else {
+        arr = arr.filter(n => n !== name);
+        cb.closest('.shop-item').classList.remove('checked');
+      }
+      saveChecked(arr);
+      updateCounter();
+    });
+  });
+
+  // Clear button
+  document.getElementById('shop-clear').addEventListener('click', () => {
+    saveChecked([]);
+    document.querySelectorAll('.shop-item input').forEach(cb => {
+      cb.checked = false;
+      cb.closest('.shop-item').classList.remove('checked');
+    });
+    updateCounter();
+  });
+}
+
+function openShoppingList() {
+  renderShoppingList();
+  document.getElementById('modal-overlay').classList.remove('hidden');
+}
+
 // === Init ===
 document.addEventListener('DOMContentLoaded', () => {
   renderTabs();
   renderDay();
 
   document.getElementById('btn-info').addEventListener('click', openModal);
+  document.getElementById('btn-shop').addEventListener('click', openShoppingList);
   document.getElementById('modal-overlay').addEventListener('click', (e) => {
     if (e.target.classList.contains('modal-overlay')) closeModal();
   });

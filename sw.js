@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gabgnam-v1';
+const CACHE_NAME = 'gabgnam-v2';
 const ASSETS = [
   './',
   './index.html',
