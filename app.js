@@ -239,8 +239,19 @@ const DAYS = [
           { name: 'Parmigiano grattugiato', qty: 'g 10' },
           { name: 'Speck', qty: 'g 50' },
           { name: 'Olio extra vergine di oliva', qty: '3 cucchiaini' }
+        ]
+      },
+      {
+        type: 'Cena Alternativa',
+        icon: '🥑',
+        recipe: 'Avocado toast',
+        items: [
+          { name: 'Uovo di gallina o prosciutto crudo', qty: 'n° 1 o g 50' },
+          { name: 'Avocado', qty: 'g 50' },
+          { name: 'Salsa tzatziki', qty: 'q.b.' },
+          { name: 'Pane integrale ai cereali', qty: 'g 100' }
         ],
-        prep: 'Alternativa: Avocado toast con 1 uovo o 50 g di prosciutto crudo, 50 g di avocado, salsa tzatziki q.b., pane ai cereali 100 g.'
+        prep: 'Tostare il pane, spalmare l\'avocado schiacciato, aggiungere l\'uovo (in camicia o al tegamino) oppure il prosciutto crudo, e completare con salsa tzatziki.'
       }
     ]
   },
@@ -494,7 +505,7 @@ function categorize(name) {
   if (/orata|spigola|merluzzo|hamburger|manzo|pollo|petto|salmone|carne|vitello|maiale|prosciutto|speck/.test(n)) return 'Carne e Pesce';
   if (/latte|yogurt|parmigiano|philadelphia|scamorza|provola|bufala|trenta|uovo/.test(n)) return 'Latticini e Uova';
   if (/pane|fiocchi|corn flakes|choco kraves|pasta|riso|pancarrè|gallette|plumcake|pangrattato|mollica/.test(n)) return 'Pane e Cereali';
-  if (/olio|miele|nutella|salsa|pomodoro/.test(n)) return 'Condimenti';
+  if (/olio|miele|nutella|salsa|pomodoro|tzatziki/.test(n)) return 'Condimenti';
   if (/noci|mandorle/.test(n)) return 'Frutta secca';
   if (/tè|spremuta/.test(n)) return 'Bevande';
   return 'Altro';

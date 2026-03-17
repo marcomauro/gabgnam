@@ -125,7 +125,13 @@
 - Speck — g 50
 - Olio extra vergine di oliva — 3 cucchiaini
 
-> **Alternativa:** Avocado toast con 1 uovo o 50 g di prosciutto crudo, 50 g di avocado, salsa tzatziki q.b., pane ai cereali 100 g.
+### Cena Alternativa — Avocado toast
+- Uovo di gallina o prosciutto crudo — n° 1 o g 50
+- Avocado — g 50
+- Salsa tzatziki — q.b.
+- Pane integrale ai cereali — g 100
+
+> **Preparazione:** Tostare il pane, spalmare l'avocado schiacciato, aggiungere l'uovo (in camicia o al tegamino) oppure il prosciutto crudo, e completare con salsa tzatziki.
 
 ---
 
