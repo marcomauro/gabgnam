@@ -11,14 +11,14 @@ const DAYS = [
         icon: '☀️',
         items: [
           { name: 'Latte parzialmente scremato di vacca', qty: 'g 200' },
-          { name: 'Fiocchi di mais (corn flakes)', qty: 'g 30' }
+          { name: 'Choco kraves', qty: 'g 25' }
         ]
       },
       {
         type: 'Metà mattina',
-        icon: '🍊',
+        icon: '🍓',
         items: [
-          { name: 'Mandaranci o clementine', qty: 'g 150' }
+          { name: 'Fragole', qty: 'g 200' }
         ]
       },
       {
@@ -41,7 +41,7 @@ const DAYS = [
         items: [
           { name: 'Orata o spigola o merluzzo', qty: 'g 200' },
           { name: 'Pangrattato', qty: 'q.b.' },
-          { name: 'Lattuga', qty: 'g 100' },
+          { name: 'Lattuga (o zucchine 200 g)', qty: 'g 100' },
           { name: 'Pane integrale ai cereali', qty: 'g 50' },
           { name: 'Olio extra vergine di oliva', qty: '6 cucchiaini' }
         ],
@@ -90,7 +90,7 @@ const DAYS = [
         icon: '🌙',
         items: [
           { name: 'Hamburger di manzo', qty: 'g 200' },
-          { name: 'Friarielli', qty: 'g 200' },
+          { name: 'Peperoni', qty: 'g 200' },
           { name: 'Olio extra vergine di oliva', qty: '4 cucchiaini' }
         ]
       }
@@ -172,7 +172,7 @@ const DAYS = [
       {
         type: 'Merenda',
         icon: '🏀',
-        subNote: 'Subito dopo fine allenamento',
+        subNote: 'Stesso timing',
         items: [
           { name: 'Pane integrale ai cereali', qty: 'g 50' },
           { name: 'Nutella', qty: 'g 20' }
@@ -224,7 +224,7 @@ const DAYS = [
       {
         type: 'Merenda',
         icon: '🏀',
-        subNote: 'Subito dopo fine allenamento',
+        subNote: 'Stesso timing',
         items: [
           { name: 'Banane', qty: 'g 150' }
         ]
@@ -239,7 +239,8 @@ const DAYS = [
           { name: 'Parmigiano grattugiato', qty: 'g 10' },
           { name: 'Speck', qty: 'g 50' },
           { name: 'Olio extra vergine di oliva', qty: '3 cucchiaini' }
-        ]
+        ],
+        prep: 'Alternativa: Avocado toast con 1 uovo o 50 g di prosciutto crudo, 50 g di avocado, salsa tzatziki q.b., pane ai cereali 100 g.'
       }
     ]
   },
@@ -253,11 +254,10 @@ const DAYS = [
         icon: '☀️',
         items: [
           { name: 'Latte parzialmente scremato di vacca', qty: 'g 200' },
-          { name: 'Fiocchi di mais (corn flakes)', qty: 'g 30' }
+          { name: 'Choco kraves', qty: 'g 25' }
         ]
       },
       {
-        japan: true,
         type: 'Metà mattina',
         icon: '🥝',
         items: [
@@ -326,11 +326,11 @@ const DAYS = [
       {
         type: 'Cena',
         icon: '🌙',
-        recipe: 'Toast crudo e provola',
+        recipe: 'Toast',
         items: [
           { name: 'Pancarrè integrale (40 g)', qty: '2 fette' },
           { name: 'Prosciutto crudo', qty: 'g 30' },
-          { name: 'Scamorza o provola', qty: 'g 30' }
+          { name: 'Bufala o philadelphia o trenta', qty: 'g 30' }
         ]
       }
     ]
@@ -490,10 +490,10 @@ const SHOP_CAT_ORDER = [
 function categorize(name) {
   const n = name.toLowerCase();
   if (/mandaranci|clementine|kiwi|fragole|banane/.test(n)) return 'Frutta';
-  if (/lattuga|friarielli|cime di rapa|cavolfiori|zucca|insalata|carote/.test(n)) return 'Verdura';
+  if (/lattuga|zucchine|friarielli|cime di rapa|cavolfiori|zucca|insalata|carote|peperoni|avocado/.test(n)) return 'Verdura';
   if (/orata|spigola|merluzzo|hamburger|manzo|pollo|petto|salmone|carne|vitello|maiale|prosciutto|speck/.test(n)) return 'Carne e Pesce';
-  if (/latte|yogurt|parmigiano|philadelphia|scamorza|provola|uovo/.test(n)) return 'Latticini e Uova';
-  if (/pane|fiocchi|corn flakes|pasta|riso|pancarrè|gallette|plumcake|pangrattato|mollica/.test(n)) return 'Pane e Cereali';
+  if (/latte|yogurt|parmigiano|philadelphia|scamorza|provola|bufala|trenta|uovo/.test(n)) return 'Latticini e Uova';
+  if (/pane|fiocchi|corn flakes|choco kraves|pasta|riso|pancarrè|gallette|plumcake|pangrattato|mollica/.test(n)) return 'Pane e Cereali';
   if (/olio|miele|nutella|salsa|pomodoro/.test(n)) return 'Condimenti';
   if (/noci|mandorle/.test(n)) return 'Frutta secca';
   if (/tè|spremuta/.test(n)) return 'Bevande';

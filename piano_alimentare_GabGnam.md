@@ -6,10 +6,10 @@
 
 ### Colazione
 - Latte parzialmente scremato di vacca — g 200
-- Fiocchi di mais (corn flakes) — g 30
+- Choco kraves — g 25
 
 ### Metà mattina
-- Mandaranci o clementine — g 150
+- Fragole — g 200
 
 ### Pranzo
 **Pasto libero**
@@ -20,7 +20,7 @@
 ### Cena — Orata gratinata al forno
 - Orata o spigola o merluzzo — g 200
 - Pangrattato — q.b.
-- Lattuga — g 100
+- Lattuga (o zucchine 200 g) — g 100
 - Pane integrale ai cereali — g 50
 - Olio extra vergine di oliva — 6 cucchiaini
 
@@ -47,7 +47,7 @@
 
 ### Cena
 - Hamburger di manzo — g 200
-- Friarielli — g 200
+- Peperoni — g 200
 - Olio extra vergine di oliva — 4 cucchiaini
 
 ---
@@ -88,7 +88,7 @@
 ### Pranzo
 **Pasto libero** (come martedì)
 
-### Merenda (subito dopo fine allenamento)
+### Merenda (stesso timing)
 - Pane integrale ai cereali — g 50
 - Nutella — g 20
 
@@ -115,7 +115,7 @@
 ### Pranzo
 **Pasto libero** (secondo, contorno, frutta e pane, se possibile)
 
-### Merenda (subito dopo fine allenamento)
+### Merenda (stesso timing)
 - Banane — g 150
 
 ### Cena — Riso, zucca, parmigiano e speck
@@ -125,13 +125,15 @@
 - Speck — g 50
 - Olio extra vergine di oliva — 3 cucchiaini
 
+> **Alternativa:** Avocado toast con 1 uovo o 50 g di prosciutto crudo, 50 g di avocado, salsa tzatziki q.b., pane ai cereali 100 g.
+
 ---
 
 ## Sabato
 
 ### Colazione
 - Latte parzialmente scremato di vacca — g 200
-- Fiocchi di mais (corn flakes) — g 30
+- Choco kraves — g 25
 
 ### Metà mattina
 - Kiwi — g 90
@@ -166,10 +168,10 @@
 ### Merenda
 - Fragole — g 250
 
-### Cena — Toast crudo e provola
+### Cena — Toast
 - Pancarrè integrale (40 g) — 2 fette
 - Prosciutto crudo — g 30
-- Scamorza o provola — g 30
+- Bufala o philadelphia o trenta — g 30
 
 ---
 
