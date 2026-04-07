@@ -51,30 +51,28 @@ header h1 {
 /* === Day tabs === */
 nav#day-tabs {
   display: flex;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
   background: var(--blue);
   padding: 0 8px 10px;
-  gap: 6px;
+  gap: 4px;
   position: sticky;
   top: 72px;
   z-index: 10;
 }
-nav#day-tabs::-webkit-scrollbar { display: none; }
 
 .tab {
-  flex: 0 0 auto;
-  padding: 6px 14px;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 6px 4px;
   border: none;
   border-radius: 20px;
-  font-size: .82rem;
+  font-size: .72rem;
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
   transition: all .2s;
   background: rgba(255,255,255,.2);
   color: rgba(255,255,255,.85);
+  text-align: center;
 }
 .tab.active {
   background: #fff;

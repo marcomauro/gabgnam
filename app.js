@@ -67,7 +67,7 @@ const DAYS = [
         type: 'Metà mattina',
         icon: '🥜',
         items: [
-          { name: 'Mandorle', qty: 'g 20' }
+          { name: 'Arachidi', qty: 'g 20' }
         ]
       },
       {
@@ -232,26 +232,23 @@ const DAYS = [
       {
         type: 'Cena',
         icon: '🌙',
-        recipe: 'Riso, zucca, parmigiano e speck',
+        recipe: 'Insalata di riso',
         items: [
           { name: 'Riso', qty: 'g 60' },
-          { name: 'Zucca', qty: 'g 100' },
-          { name: 'Parmigiano grattugiato', qty: 'g 10' },
-          { name: 'Speck', qty: 'g 50' },
-          { name: 'Olio extra vergine di oliva', qty: '3 cucchiaini' }
+          { name: 'Tonno sott\'olio', qty: '1 scatoletta' },
+          { name: 'Bufala', qty: 'g 50' },
+          { name: 'Pomodori', qty: 'q.b.' },
+          { name: 'Mais', qty: 'g 30' }
         ]
       },
       {
         type: 'Cena Alternativa',
-        icon: '🥑',
-        recipe: 'Avocado toast',
+        icon: '🥪',
+        recipe: 'Toast',
         items: [
           { name: 'Uovo di gallina o prosciutto crudo', qty: 'n° 1 o g 50' },
-          { name: 'Avocado', qty: 'g 50' },
-          { name: 'Salsa tzatziki', qty: 'q.b.' },
           { name: 'Pane integrale ai cereali', qty: 'g 100' }
-        ],
-        prep: 'Tostare il pane, spalmare l\'avocado schiacciato, aggiungere l\'uovo (in camicia o al tegamino) oppure il prosciutto crudo, e completare con salsa tzatziki.'
+        ]
       }
     ]
   },
@@ -279,7 +276,7 @@ const DAYS = [
         type: 'Pranzo',
         icon: '🍽️',
         items: [
-          { name: 'Salmone affumicato', qty: 'g 100' },
+          { name: 'Trancio di salmone', qty: 'g 150' },
           { name: 'Insalata mista', qty: 'g 200' },
           { name: 'Olio extra vergine di oliva', qty: '3 cucchiaini' }
         ]
@@ -502,11 +499,11 @@ function categorize(name) {
   const n = name.toLowerCase();
   if (/mandaranci|clementine|kiwi|fragole|banane/.test(n)) return 'Frutta';
   if (/lattuga|zucchine|friarielli|cime di rapa|cavolfiori|zucca|insalata|carote|peperoni|avocado/.test(n)) return 'Verdura';
-  if (/orata|spigola|merluzzo|hamburger|manzo|pollo|petto|salmone|carne|vitello|maiale|prosciutto|speck/.test(n)) return 'Carne e Pesce';
+  if (/orata|spigola|merluzzo|hamburger|manzo|pollo|petto|salmone|tonno|carne|vitello|maiale|prosciutto|speck/.test(n)) return 'Carne e Pesce';
   if (/latte|yogurt|parmigiano|philadelphia|scamorza|provola|bufala|trenta|uovo/.test(n)) return 'Latticini e Uova';
   if (/pane|fiocchi|corn flakes|choco kraves|pasta|riso|pancarrè|gallette|plumcake|pangrattato|mollica/.test(n)) return 'Pane e Cereali';
-  if (/olio|miele|nutella|salsa|pomodoro|tzatziki/.test(n)) return 'Condimenti';
-  if (/noci|mandorle/.test(n)) return 'Frutta secca';
+  if (/olio|miele|nutella|salsa|pomodor|mais/.test(n)) return 'Condimenti';
+  if (/noci|mandorle|arachidi/.test(n)) return 'Frutta secca';
   if (/tè|spremuta/.test(n)) return 'Bevande';
   return 'Altro';
 }

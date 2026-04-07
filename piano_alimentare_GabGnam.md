@@ -36,7 +36,7 @@
 - Noci secche — g 10
 
 ### Metà mattina
-- Mandorle — g 20
+- Arachidi — g 20
 
 ### Pranzo
 **Pasto libero** (primo piatto, secondo e contorno, frutta, evitare pane)
@@ -118,20 +118,16 @@
 ### Merenda (stesso timing)
 - Banane — g 150
 
-### Cena — Riso, zucca, parmigiano e speck
+### Cena — Insalata di riso
 - Riso — g 60
-- Zucca — g 100
-- Parmigiano grattugiato — g 10
-- Speck — g 50
-- Olio extra vergine di oliva — 3 cucchiaini
+- Tonno sott'olio — 1 scatoletta
+- Bufala — g 50
+- Pomodori — q.b.
+- Mais — g 30
 
-### Cena Alternativa — Avocado toast
+### Cena Alternativa — Toast
 - Uovo di gallina o prosciutto crudo — n° 1 o g 50
-- Avocado — g 50
-- Salsa tzatziki — q.b.
 - Pane integrale ai cereali — g 100
-
-> **Preparazione:** Tostare il pane, spalmare l'avocado schiacciato, aggiungere l'uovo (in camicia o al tegamino) oppure il prosciutto crudo, e completare con salsa tzatziki.
 
 ---
 
@@ -145,7 +141,7 @@
 - Kiwi — g 90
 
 ### Pranzo
-- Salmone affumicato — g 100
+- Trancio di salmone — g 150
 - Insalata mista — g 200
 - Olio extra vergine di oliva — 3 cucchiaini
 
