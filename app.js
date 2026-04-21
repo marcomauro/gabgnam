@@ -46,6 +46,19 @@ const DAYS = [
           { name: 'Olio extra vergine di oliva', qty: '6 cucchiaini' }
         ],
         prep: 'Lasciare marinare il pesce in succo di limone, cospargere con pangrattato (prezzemolo, aglio e pepe a scelta), ungere la teglia con 2 cucchiaini di olio e altri 2 sul pesce. In forno preriscaldato a 180° per circa 25 minuti.'
+      },
+      {
+        type: 'Cena Alternativa',
+        icon: '🐟',
+        recipe: 'Sogliola al forno',
+        items: [
+          { name: 'Sogliola', qty: 'g 200' },
+          { name: 'Pomodorini, aglio, prezzemolo', qty: 'q.b.' },
+          { name: 'Lattuga (o zucchine 200 g)', qty: 'g 100' },
+          { name: 'Pane integrale ai cereali', qty: 'g 50' },
+          { name: 'Olio extra vergine di oliva', qty: '6 cucchiaini' }
+        ],
+        prep: 'Stessa ricetta della gratinata oppure con pomodorini, aglio, prezzemolo q.b., olio evo e pane come indicato.'
       }
     ]
   },
@@ -65,9 +78,9 @@ const DAYS = [
       },
       {
         type: 'Metà mattina',
-        icon: '🥜',
+        icon: '🥛',
         items: [
-          { name: 'Arachidi', qty: 'g 20' }
+          { name: 'Yakult (1 bottiglina)', qty: 'g 60' }
         ]
       },
       {
@@ -138,6 +151,26 @@ const DAYS = [
           { name: 'Cime di rapa (anche cavolfiori)', qty: '1 porzione' },
           { name: 'Parmigiano grattugiato', qty: 'circa 10 g' },
           { name: 'Olio extra vergine di oliva', qty: '3 cucchiaini' }
+        ]
+      },
+      {
+        type: 'Cena Alternativa',
+        icon: '🌿',
+        recipe: 'Pasta al pesto alla genovese',
+        items: [
+          { name: 'Pasta di semola', qty: 'g 60' },
+          { name: 'Pesto alla genovese', qty: 'q.b.' },
+          { name: 'Olio extra vergine di oliva', qty: '5 cucchiaini' }
+        ]
+      },
+      {
+        type: 'Cena Alternativa',
+        icon: '🍅',
+        recipe: 'Pasta pomodoro fresco e basilico',
+        items: [
+          { name: 'Pasta di semola', qty: 'g 60' },
+          { name: 'Pomodoro fresco, aglio e basilico', qty: 'q.b.' },
+          { name: 'Olio extra vergine di oliva', qty: '5 cucchiaini' }
         ]
       }
     ]
@@ -499,10 +532,10 @@ function categorize(name) {
   const n = name.toLowerCase();
   if (/mandaranci|clementine|kiwi|fragole|banane/.test(n)) return 'Frutta';
   if (/lattuga|zucchine|friarielli|cime di rapa|cavolfiori|zucca|insalata|carote|peperoni|avocado/.test(n)) return 'Verdura';
-  if (/orata|spigola|merluzzo|hamburger|manzo|pollo|petto|salmone|tonno|carne|vitello|maiale|prosciutto|speck/.test(n)) return 'Carne e Pesce';
-  if (/latte|yogurt|parmigiano|philadelphia|scamorza|provola|bufala|trenta|uovo/.test(n)) return 'Latticini e Uova';
+  if (/orata|spigola|merluzzo|sogliola|hamburger|manzo|pollo|petto|salmone|tonno|carne|vitello|maiale|prosciutto|speck/.test(n)) return 'Carne e Pesce';
+  if (/latte|yogurt|yakult|parmigiano|philadelphia|scamorza|provola|bufala|trenta|uovo/.test(n)) return 'Latticini e Uova';
   if (/pane|fiocchi|corn flakes|choco kraves|pasta|riso|pancarrè|gallette|plumcake|pangrattato|mollica/.test(n)) return 'Pane e Cereali';
-  if (/olio|miele|nutella|salsa|pomodor|mais/.test(n)) return 'Condimenti';
+  if (/olio|miele|nutella|salsa|pesto|pomodor|mais/.test(n)) return 'Condimenti';
   if (/noci|mandorle|arachidi/.test(n)) return 'Frutta secca';
   if (/tè|spremuta/.test(n)) return 'Bevande';
   return 'Altro';

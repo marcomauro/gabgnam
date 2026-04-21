@@ -26,6 +26,15 @@
 
 > **Preparazione:** Lasciare marinare l'orata o la spigola o il merluzzo in succo di limone, cospargere il pesce con pangrattato (prezzemolo, aglio e pepe a scelta), ungere la teglia con 2 cucchiaini di olio e altri 2 sul pesce. In forno preriscaldato a 180 gradi per circa 25 minuti.
 
+### Cena Alternativa — Sogliola al forno
+- Sogliola — g 200
+- Pomodorini, aglio, prezzemolo — q.b.
+- Lattuga (o zucchine 200 g) — g 100
+- Pane integrale ai cereali — g 50
+- Olio extra vergine di oliva — 6 cucchiaini
+
+> **Preparazione:** Stessa ricetta della gratinata oppure con pomodorini, aglio, prezzemolo q.b., olio evo e pane come indicato.
+
 ---
 
 ## Martedì (basket ore 16:30)
@@ -36,7 +45,7 @@
 - Noci secche — g 10
 
 ### Metà mattina
-- Arachidi — g 20
+- Yakult (1 bottiglina) — g 60
 
 ### Pranzo
 **Pasto libero** (primo piatto, secondo e contorno, frutta, evitare pane)
@@ -72,6 +81,16 @@
 - Cime di rapa (anche cavolfiori) — 1 porzione
 - Parmigiano grattugiato — circa 10 g (2 cucchiaini)
 - Olio extra vergine di oliva — 3 cucchiaini
+
+### Cena Alternativa — Pasta al pesto alla genovese
+- Pasta di semola — g 60
+- Pesto alla genovese — q.b.
+- Olio extra vergine di oliva — 5 cucchiaini
+
+### Cena Alternativa — Pasta pomodoro fresco e basilico
+- Pasta di semola — g 60
+- Pomodoro fresco, aglio e basilico — q.b.
+- Olio extra vergine di oliva — 5 cucchiaini
 
 ---
 
